@@ -15,6 +15,7 @@ public interface RepoGarbage extends JpaRepository<Garbage,Long> {
     Garbage findByIdGarbage(long idGarbage);
     List<Garbage> findAll();
     List<Garbage> findByIsConfirm(int isConfirm);
+
     List<Garbage> findAllByDateGreaterThanEqualAndDateLessThanEqualAndIsConfirm(LocalDateTime date1,
                                                                                 LocalDateTime date2, int isConfirm);
 

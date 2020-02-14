@@ -22,13 +22,13 @@ public class CashService {
     public Garbage saveOrUpdateOrDelete(Garbage garbage){
         try {
             garbage = dataBaseService.saveOrUpdateOrDelete(garbage);
-            if (garbage.getIsConfirm()==1){
-                logger.info("error to remove garbage from map");
+          /*  if (garbage.getIsConfirm()==2){
+                logger.info("isConFirm 2 dir mapdan silinme");
                 redisService.remove(RedisMapKey.MAP_OF_GARBAGE,garbage.getIdGarbage());
             }else{
-                logger.info("error to put garbage to map");
+                logger.info("update from Redis. isConfirm 1 or 2!");
                 redisService.add(garbage.getIdGarbage(),garbage,RedisMapKey.MAP_OF_GARBAGE);
-            }
+            }*/
             return garbage;
 
         }catch (Exception e){

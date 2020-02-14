@@ -17,12 +17,7 @@ public class DataBaseService {
 
     public Garbage saveOrUpdateOrDelete(Garbage garbage) throws Exception{
         logger.info("error to save/update/delete");
-        if (garbage.getIdGarbage()==0){
-            garbage.setIsConfirm(0);
-        }
         return repoGarbage.save(garbage);
-
-
     }
 
     public List<Garbage> getAll()throws Exception{
@@ -47,8 +42,6 @@ public class DataBaseService {
             return  null;
 
         }
-
-
     }
 
     public List<Garbage> getAllNotConfirmedGarbageByDate(LocalDateTime date1, LocalDateTime date2){
@@ -61,8 +54,6 @@ public class DataBaseService {
 
         }catch (Exception e){
             return null;
-
-
         }
     }
 
