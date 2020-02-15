@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @EnableDiscoveryClient
-@EnableFeignClients("az.contasoft.xmies.garbage")
+@EnableFeignClients("az.contasoft.xmies_garbage")
 @SpringBootApplication
 public class Application {
 
