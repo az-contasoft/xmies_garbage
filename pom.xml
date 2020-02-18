@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.4.RELEASE</version>
+		<version>2.2.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>az.contasoft</groupId>
 	<artifactId>xmies_garbage</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>xmies.garbage</name>
+	<version>0.0.2</version>
+	<name>xmies_garbage</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -117,6 +117,18 @@
 
 	</dependencies>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Hoxton.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<!--    <dependencyManagement>-->
 	<!--        <dependencies>-->
 	<!--            <dependency>-->
@@ -128,18 +140,7 @@
 	<!--            </dependency>-->
 	<!--        </dependencies>-->
 	<!--    </dependencyManagement>-->
-	<dependencyManagement>
-		<dependencies>
 
-			<dependency>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Hoxton.RELEASE</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
 
 	<build>
 		<finalName>xmies_garbage</finalName>
@@ -168,9 +169,6 @@
 				<configuration>
 					<repository>heisenberg13contasoft/${project.name}</repository>
 					<tag>${project.version}</tag>
-					<googleContainerRegistryEnabled>false</googleContainerRegistryEnabled>
-					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-					<retryCount>5</retryCount>
 					<skipDockerInfo>true</skipDockerInfo>
 				</configuration>
 			</plugin>
