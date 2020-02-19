@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>az.contasoft</groupId>
 	<artifactId>xmies_garbage</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>xmies_garbage</name>
 	<description>Demo project for Spring Boot</description>
 
